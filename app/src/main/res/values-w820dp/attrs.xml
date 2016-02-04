@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="fontStyle" format="enum">
+        <enum name="regular" value="0" />
+        <enum name="light" value="1" />
+        <enum name="bold" value="2" />
+    </attr>
+
+
+    <!-- Tab Specific attributes -->
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="FloatLabel">
+        <attr name="android:hint" />
+        <attr name="android:imeOptions" />
+        <attr name="android:inputType" />
+        <attr name="android:layout" />
+        <attr name="android:nextFocusDown" />
+        <attr name="android:nextFocusForward" />
+        <attr name="android:nextFocusLeft" />
+        <attr name="android:nextFocusRight" />
+        <attr name="android:nextFocusUp" />
+        <attr name="android:text" />
+        <attr name="android:textColorHint" />
+        <attr name="android:paddingBottom" />
+        <attr name="floatLabelColor" format="color" />
+        <attr name="labelId" format="reference" />
+        <attr name="editTextId" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="float" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_circleRadius" format="dimension" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="MaterialMenuView">
+        <attr name="mm_color" format="color" />
+        <attr name="mm_scale" format="integer" />
+        <attr name="mm_transformDuration" format="integer" />
+        <attr name="mm_pressedDuration" format="integer" />
+        <attr name="mm_strokeWidth" format="integer" />
+        <attr name="mm_rtlEnabled" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ProgressPieView">
+        <attr name="android:text" />
+        <attr name="android:textSize" />
+        <attr name="android:textColor" />
+        <attr name="ppvProgress" format="integer" />
+        <attr name="ppvMax" format="integer" />
+        <attr name="ppvStartAngle" format="integer" />
+        <attr name="ppvInverted" format="boolean" />
+        <attr name="ppvCounterclockwise" format="boolean" />
+        <attr name="ppvStrokeWidth" format="dimension" />
+        <attr name="ppvBackgroundColor" format="reference|color" />
+        <attr name="ppvProgressColor" format="reference|color" />
+        <attr name="ppvStrokeColor" format="reference|color" />
+        <attr name="ppvShowStroke" format="boolean" />
+        <attr name="ppvShowText" format="boolean" />
+        <attr name="ppvTypeface" format="string" />
+        <attr name="ppvImage" format="reference" />
+        <attr name="ppvProgressFillType" format="enum">
+            <enum name="radial" value="0" />
+            <enum name="center" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="RoundedLetterView">
+        <attr name="rlv_titleText" format="string" />
+        <attr name="rlv_titleSize" format="dimension" />
+        <attr name="rlv_titleColor" format="color" />
+        <attr name="rlv_backgroundColorValue" format="color" />
+    </declare-styleable>
+    <declare-styleable name="RangeSliderView">
+        <attr name="rangeCount" format="integer" />
+        <attr name="filledColor" format="color" />
+        <attr name="emptyColor" format="color" />
+        <attr name="barHeightPercent" format="float" />
+        <attr name="slotRadiusPercent" format="float" />
+        <attr name="sliderRadiusPercent" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="RangeBar">
+        <attr name="tickCount" format="integer" />
+        <attr name="tickHeight" format="dimension" />
+        <attr name="barWeight" format="dimension" />
+        <attr name="barColor" format="reference|color" />
+        <attr name="connectingLineWeight" format="dimension" />
+        <attr name="connectingLineColor" format="reference|color" />
+        <attr name="thumbRadius" format="dimension" />
+        <attr name="thumbImageNormal" format="reference" />
+        <attr name="thumbImagePressed" format="reference" />
+        <attr name="thumbColorNormal" format="reference|color" />
+        <attr name="thumbColorPressed" format="reference|color" />
+    </declare-styleable>
+    <declare-styleable name="RangeSeekBar">
+        <attr name="absoluteMinValue" format="integer|float" />
+        <attr name="absoluteMaxValue" format="integer|float" />
+        <attr name="singleThumb" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TypefacedTextView">
+        <attr name="fontStyle" />
+    </declare-styleable>
+    <declare-styleable name="CircleBorderImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="CircleIndicator">
+        <attr name="ci_width" format="dimension" />
+        <attr name="ci_height" format="dimension" />
+        <attr name="ci_margin" format="dimension" />
+        <attr name="ci_animator" format="reference" />
+        <attr name="ci_animator_reverse" format="reference" />
+        <attr name="ci_drawable" format="reference" />
+        <attr name="ci_drawable_unselected" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="SpringIndicator">
+
+        <!-- tab text color -->
+        <attr name="siTextColor" format="reference" />
+
+        <!-- tab text color which is selected -->
+        <attr name="siSelectedTextColor" format="reference" />
+
+        <!-- tab item bg -->
+        <attr name="siTextBg" format="reference" />
+
+        <!-- tab text size -->
+        <attr name="siTextSize" format="dimension" />
+
+        <!-- indicator bg color -->
+        <attr name="siIndicatorColor" format="reference" />
+
+        <!-- indicator bg colors. should equals your titles count -->
+        <attr name="siIndicatorColors" format="reference" />
+
+        <!-- max indicator radius -->
+        <attr name="siRadiusMax" format="dimension" />
+
+        <!-- min indicator radius when moving -->
+        <attr name="siRadiusMin" format="dimension" />
+    </declare-styleable>
+
+</resources>

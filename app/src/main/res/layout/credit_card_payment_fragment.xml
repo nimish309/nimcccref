@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/unit_5dp">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardViewTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        card_view:cardCornerRadius="@dimen/unit_10dp"
+        card_view:cardElevation="@dimen/unit_3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/unit_10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/unit_5dp"
+                    android:layout_toLeftOf="@+id/ImgEditName"
+                    android:layout_weight="1"
+                    android:focusable="true">
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                        android:id="@+id/edtxtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_selecter"
+                        android:drawablePadding="7dp"
+                        android:focusable="true"
+                        android:hint="Name"
+                        android:imeOptions="actionNext"
+                        android:maxEms="10"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textSize="16dp"
+                        app:fontStyle="regular" />
+
+                    <requestFocus />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/unit_5dp"
+                    android:layout_toLeftOf="@+id/ImgEditName"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                        android:id="@+id/edtxtSurName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_selecter"
+                        android:drawablePadding="7dp"
+                        android:focusable="true"
+                        android:hint="SurName"
+                        android:imeOptions="actionNext"
+                        android:maxEms="10"
+                        android:maxLength="10"
+                        android:nextFocusForward="@+id/etRegisterPNum"
+                        android:singleLine="true"
+                        android:textSize="16dp"
+                        app:fontStyle="regular" />
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/unit_5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/ImgEditName"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                    android:id="@+id/edtxtCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_selecter"
+                    android:drawablePadding="7dp"
+                    android:focusable="true"
+                    android:hint="Card Number"
+                    android:imeOptions="actionNext"
+                    android:maxEms="10"
+                    android:maxLength="10"
+                    android:nextFocusForward="@+id/etRegisterPNum"
+                    android:singleLine="true"
+                    android:textSize="16dp"
+                    app:fontStyle="regular" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/unit_5dp"
+                    android:layout_toLeftOf="@+id/ImgEditName"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                        android:id="@+id/edtxtExpiryDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_selecter"
+                        android:drawablePadding="7dp"
+                        android:focusable="true"
+                        android:hint="Expiry Date"
+                        android:imeOptions="actionNext"
+                        android:maxEms="10"
+                        android:maxLength="10"
+                        android:nextFocusForward="@+id/etRegisterPNum"
+                        android:singleLine="true"
+                        android:textSize="16dp"
+                        app:fontStyle="regular" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="@dimen/unit_5dp"
+                    android:layout_toLeftOf="@+id/ImgEditName"
+                    android:layout_weight="1"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true">
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                        android:id="@+id/edtxtCvv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_selecter"
+                        android:drawablePadding="7dp"
+                        android:focusable="true"
+                        android:hint=" Cvv"
+                        android:imeOptions="actionNext"
+                        android:maxEms="10"
+                        android:maxLength="10"
+                        android:nextFocusForward="@+id/etRegisterPNum"
+                        android:singleLine="true"
+                        android:textSize="16dp"
+                        app:fontStyle="regular" />
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardViewTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardViewTop"
+        android:layout_marginTop="@dimen/unit_10dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        card_view:cardCornerRadius="@dimen/unit_4dp"
+        card_view:cardElevation="@dimen/unit_3dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cardViewTop"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/unit_10dp"
+            android:layout_marginRight="@dimen/unit_10dp"
+            android:padding="@dimen/unit_5dp">
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtSubTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageViewUser"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/unit_5dp"
+                android:text="Subtotal"
+                android:textSize="16dp"
+                app:fontStyle="regular" />
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="$100.25"
+                android:textSize="16dp"
+                app:fontStyle="regular" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+        android:id="@+id/btnMakePayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/unit_10dp"
+        android:background="@drawable/button_selecter_round_corner"
+        android:text="MAKE PAYMENT"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        app:fontStyle="regular" />
+</RelativeLayout>

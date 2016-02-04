@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayoutCart"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    style="@android:style/Widget.ActionButton">
+
+    <ImageView
+        android:id="@+id/item_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/unit_0dp"
+        android:padding="@dimen/unit_8dp"
+        android:contentDescription="bell"
+        android:gravity="center"
+        android:src="@drawable/ic_shopping_cart_white_24dp" />
+
+    <TextView
+        android:id="@+id/txtCartItemCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/item_cart"
+        android:layout_alignTop="@id/item_cart"
+        android:layout_marginRight="@dimen/unit_1dp"
+        android:background="@drawable/menu_item_round_textview"
+        android:gravity="center"
+        android:minWidth="17sp"
+        android:paddingBottom="@dimen/unit_1dp"
+        android:paddingLeft="@dimen/unit_4dp"
+        android:paddingRight="@dimen/unit_4dp"
+        android:maxLength="3"
+        android:textColor="#ffffffff"
+        android:textSize="12sp" />
+</RelativeLayout>

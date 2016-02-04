@@ -1,0 +1,82 @@
+<resources>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="app_name">The Centre Court Cakes</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_detail_information">DetailInformationActivity</string>
+
+    <string name="map_key">AIzaSyCeboEoqnTXfbKr8m7_DshQsB0LD7T0ABE</string>
+    <string name="app_id">939338309474388</string>
+
+    <string-array name="selectAction">
+        <item>Resend OTP</item>
+        <item>Enter OTP Manually</item>
+    </string-array>
+
+    <string name="cancel">Cancel</string>
+
+    <string name="title_activity_item_review">ItemReviewActivity</string>
+    <string name="title_activity_item_detail">ItemDetailActivity</string>
+    <string name="title_activity_my_cart">My Cart</string>
+    <string name="title_activity_shipping_detail">ShippingDetail</string>
+    <string name="title_activity_order_list">OrderListActivity</string>
+    <string name="title_activity_my_address_list">MyAddressListActivity</string>
+    <string name="title_activity_add_address">AddAddressActivity</string>
+    <string name="title_activity_news_letter">NewsLetterActivity</string>
+
+    <!--For Payment-->
+    <string name="access_code">Access Code</string>
+    <string name="pay_opt">Payment Option</string>
+    <string name="card_type">Card Type</string>
+    <string name="pay_button">Pay</string>
+    <string name="next_button">Next</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="country">Country</string>
+    <string name="billingAddress">Billing Address</string>
+    <string name="deliveryAddress">Delivery Address</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="zip">Zip</string>
+    <string name="tel">Telephone</string>
+    <string name="email">Email Id</string>
+    <string name="merchant_id">Merchant Id</string>
+    <string name="currency">Currency</string>
+    <string name="amount">Amount</string>
+    <string name="redirect_url">Redirect Url</string>
+    <string name="cancel_url">Cancel Url</string>
+    <string name="card_number">Card Number</string>
+    <string name="card_cvv">Card CVV</string>
+    <string name="expiry_month">Expiry Month</string>
+    <string name="expiry_year">Expiry Year</string>
+    <string name="card_details">Card Details</string>
+    <string name="issuing_bank">Issuing Bank</string>
+    <string name="rsa_url">RSA Key Url</string>
+    <string name="customer_identifier">Customer Identifier</string>
+    <string name="emi_banks">EMI Banks</string>
+    <string name="emi_card_name">Card Name</string>
+    <string name="title_activity_track_order">TrackOrderActivity</string>
+
+    <string-array name="gift_theme">
+        <item>Birthday</item>
+        <item>Christmas</item>
+        <item>General</item>
+    </string-array>
+
+    <string-array name="gift_theme_id">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+
+    <!--<string name="access">4YRUXLSRO20O8NIH</string>
+    <string name="merchant">2</string>-->
+
+    <string name="access">IWFNWUPZ7KIENQUP</string>
+    <string name="merchant">13024</string>
+    <string name="title_activity_change_password">ChangePassword</string>
+
+
+</resources>

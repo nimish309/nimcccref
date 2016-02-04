@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/layoutBaground"
+    android:orientation="vertical">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/DashboardCakesRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/layoutBaground"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/scrollthumb"
+        android:scrollbars="vertical" />
+
+    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+        android:id="@+id/txtNoResult"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="@dimen/unit_64dp"
+        android:gravity="center_horizontal|top"
+        android:text="Opps!!! No Data Found"
+        android:textSize="@dimen/unit_20dp"
+        android:visibility="visible"
+        app:fontStyle="regular" />
+
+</LinearLayout>

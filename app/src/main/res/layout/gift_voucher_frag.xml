@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/unit_16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_8dp"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/unit_4dp"
+                android:layout_weight="1"
+                android:focusable="true">
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                    android:id="@+id/etYourName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_selecter"
+                    android:focusable="true"
+                    android:hint="Your Name *"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@android:color/secondary_text_light_nodisable"
+                    android:textSize="@dimen/unit_14dp"
+                    app:fontStyle="regular">
+
+                    <requestFocus />
+                </com.coruscate.centrecourt.CustomControls.TypefacedEditText>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:focusable="true">
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                    android:id="@+id/etYourEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/unit_4dp"
+                    android:background="@drawable/edittext_selecter"
+                    android:focusable="true"
+                    android:hint="Your Email *"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@android:color/secondary_text_light_nodisable"
+                    android:textSize="@dimen/unit_14dp"
+                    app:fontStyle="regular" />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_12dp"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/unit_4dp"
+                android:layout_weight="1"
+                android:focusable="true">
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                    android:id="@+id/etYourContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_selecter"
+                    android:focusable="true"
+                    android:hint="Your Contact No. *"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@android:color/secondary_text_light_nodisable"
+                    android:textSize="@dimen/unit_14dp"
+                    app:fontStyle="regular" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:focusable="true">
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                    android:id="@+id/etReceipentName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/unit_4dp"
+                    android:background="@drawable/edittext_selecter"
+                    android:focusable="true"
+                    android:hint="Recipient's  name"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@android:color/secondary_text_light_nodisable"
+                    android:textSize="@dimen/unit_14dp"
+                    app:fontStyle="regular" />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_12dp"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/unit_4dp"
+                android:layout_weight="1"
+                android:focusable="true">
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                    android:id="@+id/etReceipentEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_selecter"
+                    android:focusable="true"
+                    android:hint="Recipient's Email *"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@android:color/secondary_text_light_nodisable"
+                    android:textSize="@dimen/unit_14dp"
+                    app:fontStyle="regular" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:focusable="true">
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                    android:id="@+id/etReceipentContact"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/unit_4dp"
+                    android:background="@drawable/edittext_selecter"
+                    android:focusable="true"
+                    android:hint="Recipient's Contact No. *"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@android:color/secondary_text_light_nodisable"
+                    android:textSize="@dimen/unit_14dp"
+                    app:fontStyle="regular" />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/unit_12dp"
+            android:focusable="true">
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                android:id="@+id/etMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_selecter"
+                android:drawablePadding="7dp"
+                android:focusable="true"
+                android:gravity="top|left"
+                android:hint="Message"
+                android:imeOptions="actionNext"
+                android:maxLines="7"
+                android:minLines="3"
+                android:textSize="@dimen/unit_14dp"
+                app:fontStyle="regular" />
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_12dp"
+            android:orientation="horizontal">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/unit_4dp"
+                android:layout_weight="1"
+                android:focusable="true">
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                    android:id="@+id/etAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_selecter"
+                    android:focusable="true"
+                    android:hint="Amount *"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@android:color/secondary_text_light_nodisable"
+                    android:textSize="@dimen/unit_14dp"
+                    app:fontStyle="regular" />
+
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:focusable="true">
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                    android:id="@+id/etTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edittext_selecter"
+                    android:drawableRight="@drawable/ic_arrow_drop_down_grey_600_24dp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="Theme"
+                    android:imeOptions="actionNext"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@android:color/secondary_text_light_nodisable"
+                    android:textSize="@dimen/unit_14dp"
+                    app:fontStyle="regular" />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/chkTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_16dp"
+            android:text="I Understand That Gift Certificates Are Non-Refundable."
+            android:textColor="@color/gray"
+            android:textSize="10dp" />
+
+        <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+            android:id="@+id/btnContinue"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_16dp"
+            android:background="@drawable/button_selecter_round_corner"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="12dp" />
+    </LinearLayout>
+</LinearLayout>

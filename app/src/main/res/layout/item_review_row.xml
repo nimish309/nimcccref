@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/unit_8dp"
+    android:layout_marginRight="@dimen/unit_8dp"
+    android:layout_marginTop="@dimen/unit_8dp"
+    android:orientation="vertical">
+
+    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:textSize="16dp"
+        app:fontStyle="regular" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RatingBar
+            android:id="@+id/rattingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:layout_alignParentLeft="true"
+            android:progressTint="@color/yellow"
+            android:rating="3"
+            android:stepSize="0.5" />
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+            android:id="@+id/txtDays"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:layout_alignParentRight="true"
+            android:textSize="14dp"
+            app:fontStyle="regular" />
+    </RelativeLayout>
+    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+        android:id="@+id/txtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:layout_alignParentRight="true"
+        android:textSize="14dp"
+        app:fontStyle="regular" />
+</LinearLayout>

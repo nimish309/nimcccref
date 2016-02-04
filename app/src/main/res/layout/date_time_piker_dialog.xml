@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:layout_margin="@dimen/unit_32dp"
+    android:orientation="vertical"
+    card_view:cardCornerRadius="@dimen/unit_4dp"
+    card_view:cardElevation="@dimen/unit_4dp">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearSetDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/unit_5dp">
+
+            <ImageView
+                android:id="@+id/imgDate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/unit_28dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="@dimen/unit_2dp"
+                android:clickable="false"
+                android:src="@drawable/icon_date_1" />
+
+            <ImageView
+                android:id="@+id/imgTime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/unit_28dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="@dimen/unit_2dp"
+                android:src="@drawable/icon_time_2" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutDialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linearSetAndCancel"
+            android:layout_below="@id/linearSetDateTime"
+            android:layout_marginTop="@dimen/unit_5dp"
+            android:orientation="vertical">
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:endYear="2100"
+                android:startYear="1900"
+                android:visibility="visible"
+                />
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearSetAndCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/unit_5dp">
+
+            <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+                android:id="@+id/btnSet"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/unit_32dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/button_selecter_round_corner"
+                android:paddingLeft="@dimen/unit_5dp"
+                android:paddingRight="@dimen/unit_5dp"
+                android:text="Set"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                app:fontStyle="bold"
+                android:layout_marginRight="@dimen/unit_2dp"/>
+
+
+            <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/unit_32dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/button_selecter_round_corner"
+                android:paddingLeft="@dimen/unit_5dp"
+                android:paddingRight="@dimen/unit_5dp"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:layout_marginLeft="@dimen/unit_2dp"
+                app:fontStyle="bold" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/layoutBaground"
+    android:padding="@dimen/unit_5dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/layoutBaground">
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtIntroductionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/unit_1dp"
+                android:singleLine="true"
+                android:text="Introduction"
+                android:textSize="16dp"
+                app:fontStyle="regular" />
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtIntroductionDiscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/unit_2dp"
+                android:padding="@dimen/unit_1dp"
+                android:singleLine="true"
+                android:text="Description"
+                android:textSize="14dp"
+                app:fontStyle="light" />
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtSitProhibitioTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/unit_2dp"
+                android:padding="@dimen/unit_1dp"
+                android:singleLine="true"
+                android:text="Prohibition"
+                android:textSize="16dp"
+                app:fontStyle="regular" />
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtSitProhibitioDiscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/unit_2dp"
+                android:padding="@dimen/unit_1dp"
+                android:singleLine="true"
+                android:text="prohibitionDiscription"
+                android:textSize="14dp"
+                app:fontStyle="light" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.coruscate.centrecourt.UserInterface.Activity.OrderListActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/myOrderRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/layoutBaground"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/scrollthumb"
+        android:scrollbars="vertical" />
+
+    <include layout="@layout/progressbar_nodata" />
+
+</LinearLayout>

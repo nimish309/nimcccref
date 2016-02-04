@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackground">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relativeLayoutTotal"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/actionbar"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/unit_8dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgDelivery"
+                    android:layout_width="@dimen/unit_56dp"
+                    android:layout_height="@dimen/unit_56dp"
+                    android:alpha="0.5"
+                    android:src="@drawable/icon_delivery" />
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                    android:id="@+id/txtDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"
+                    android:text="Delivery"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/unit_12dp"
+                    android:textStyle="bold"
+                    app:fontStyle="bold" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewBetween"
+                android:layout_width="@dimen/unit_140dp"
+                android:layout_height="@dimen/unit_1dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="@dimen/unit_28dp"
+                android:alpha="0.5"
+                android:background="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgPayment"
+                    android:layout_width="@dimen/unit_56dp"
+                    android:layout_height="@dimen/unit_56dp"
+                    android:alpha="0.5"
+                    android:src="@drawable/icon_payment" />
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                    android:id="@+id/txtPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.5"
+                    android:text="Payment"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/unit_12dp"
+                    android:textStyle="bold"
+                    app:fontStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/nav_contentframe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/background_light" />
+
+    </LinearLayout>
+
+</RelativeLayout>

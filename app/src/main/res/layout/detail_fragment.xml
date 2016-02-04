@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:baselineAligned="false">
+
+    <!-- <com.tuesda.walker.circlerefresh.CircleRefreshLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+         android:id="@+id/refresh_layout_detail"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         app:AniBackColor="#3e2723"
+         app:AniForeColor="#ffffffff"
+         app:CircleSmaller="6">-->
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/item_swipe_container_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/activityBackground">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/filterLayoutMain"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/unit_48dp"
+                android:background="@color/actionbar"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/unit_8dp">
+
+
+                <LinearLayout
+                    android:id="@+id/filterLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/unit_48dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imgViewFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:paddingBottom="@dimen/unit_4dp"
+                        android:src="@drawable/icon_filter" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/unit_4dp"
+                        android:orientation="vertical">
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:text="Filter"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/unit_14dp"
+                            android:textStyle="bold"
+                            app:fontStyle="bold" />
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                            android:id="@+id/txtFiltered"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:ellipsize="marquee"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/unit_12dp"
+                            app:fontStyle="regular" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/floatingBth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_layout" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/detailRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/unit_48dp"
+                android:background="@color/layoutBaground"
+                android:fadeScrollbars="false"
+                android:scrollbarThumbVertical="@drawable/scrollthumb"
+                android:scrollbars="vertical" />
+
+                <include layout="@layout/filter_layout" />
+
+        </FrameLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include layout="@layout/progressbar_nodata" />
+    <!--</com.tuesda.walker.circlerefresh.CircleRefreshLayout>-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingBth_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/unit_8dp"
+        android:clickable="true"
+        android:src="@drawable/ic_action_add"
+        android:visibility="gone" />
+
+</FrameLayout>

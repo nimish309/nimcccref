@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_above="@+id/linearlayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/actionbar"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:tabContentStart="@dimen/unit_24dp"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="@color/white"
+            app:tabIndicatorHeight="@dimen/unit_2dp"
+            app:tabMinWidth="24dp"
+            app:tabMode="scrollable"
+            app:tabPadding="1dp"
+            app:tabSelectedTextColor="@color/LightGray"
+            app:tabTextColor="@color/white" />
+
+        <android.support.v4.view.ViewPager
+              android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearlayoutBottom"
+        android:padding="@dimen/unit_10dp">
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+            android:id="@+id/txtSubTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewUser"
+            android:layout_centerVertical="true"
+            android:textSize="16dp"
+            app:fontStyle="regular" />
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+            android:id="@+id/txtTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="16dp"
+            app:fontStyle="regular" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearlayoutBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+            android:id="@+id/btnContiueCheckOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/button_selector"
+            android:paddingLeft="@dimen/unit_5dp"
+            android:paddingRight="@dimen/unit_5dp"
+            android:text="CHECKOUT"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            app:fontStyle="regular" />
+    </LinearLayout>
+
+
+</RelativeLayout>

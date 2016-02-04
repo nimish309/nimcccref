@@ -1,0 +1,143 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/unit_8dp"
+    android:layout_marginRight="@dimen/unit_8dp"
+    android:layout_marginTop="@dimen/unit_8dp"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    card_view:cardCornerRadius="@dimen/unit_3dp"
+    card_view:cardElevation="@dimen/unit_3dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayoutrow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/ImgRowImage"
+            android:layout_width="@dimen/unit_100dp"
+            android:layout_height="@dimen/unit_100dp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="left|center"
+            android:padding="@dimen/unit_8dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/ImgRowImage"
+            android:layout_toLeftOf="@+id/checkItem"
+            android:orientation="vertical"
+            android:paddingRight="@dimen/unit_5dp">
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/unit_24dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:padding="@dimen/unit_1dp"
+                android:textSize="16dp"
+                app:fontStyle="regular" />
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtPricePer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:textSize="12dp"
+                android:visibility="gone"
+                app:fontStyle="regular" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgDecrease"
+                    android:layout_width="@dimen/unit_28dp"
+                    android:layout_height="@dimen/unit_28dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/unit_2dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:padding="@dimen/unit_2dp"
+                    android:src="@drawable/ic_remove_circle_black_24dp" />
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/unit_5dp"
+                    android:layout_marginRight="@dimen/unit_5dp"
+                    android:padding="@dimen/unit_2dp"
+                    android:textSize="16dp"
+                    app:fontStyle="regular" />
+
+                <ImageView
+                    android:id="@+id/imgIncrease"
+                    android:layout_width="@dimen/unit_28dp"
+                    android:layout_height="@dimen/unit_28dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:padding="@dimen/unit_2dp"
+                    android:src="@drawable/ic_add_circle_black_24dp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarRow"
+                    android:layout_width="@dimen/unit_28dp"
+                    android:layout_height="@dimen/unit_28dp"
+                    android:background="@android:color/transparent"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@android:color/black"
+                    android:indeterminateTintMode="src_atop"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                    android:id="@+id/txtRupeesSymbol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/unit_1dp"
+                    android:textColor="@color/gray"
+                    android:textSize="16dp"
+                    android:visibility="gone"
+                    app:fontStyle="regular" />
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                    android:id="@+id/txtPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/unit_1dp"
+                    android:visibility="gone"
+                    android:textColor="@color/gray"
+                    android:textSize="16dp"
+                    app:fontStyle="regular" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedCheckBox
+            android:id="@+id/checkItem"
+            android:layout_width="@dimen/unit_32dp"
+            android:layout_height="@dimen/unit_32dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:padding="@dimen/unit_8dp" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

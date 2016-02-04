@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/root_coordinator"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/unit_160dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ImgCake"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/unit_160dp"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/hart_cake" />
+
+                            <ImageView
+                                android:id="@+id/ImgChocolate"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/unit_160dp"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/hart_cake" />
+
+                            <ImageView
+                                android:id="@+id/ImgFlower"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/unit_160dp"
+                                android:layout_weight="1"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/hart_cake" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+        <!--content view-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tabanim_tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:fontStyle="bold"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:tabContentStart="@dimen/unit_24dp"
+                app:tabIndicatorColor="@color/actionbar"
+                app:tabIndicatorHeight="@dimen/unit_2dp"
+                app:tabMode="scrollable"
+                app:tabSelectedTextColor="@color/statusbar"
+                app:tabTextColor="@color/actionbar" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/tabanim_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutCantConnect"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:animateLayoutChanges="true"
+    android:background="@android:color/transparent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+
+    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/unit_16dp"
+        android:text="Can't Connect right now."
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/unit_18dp"
+        android:textStyle="normal"
+       app:fontStyle="regular" />
+
+    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/unit_4dp"
+        android:visibility="gone"
+        android:text="Please check your internet connection"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/unit_14dp"
+        app:fontStyle="regular" />
+
+
+    <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+        android:id="@+id/btnTryAgain"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/unit_16dp"
+        android:background="@drawable/button_selecter_round_corner"
+        android:elevation="@dimen/unit_4dp"
+        android:text="Try Again"
+        android:textColor="@color/white"
+        android:textSize="@dimen/unit_14dp" />
+
+
+</LinearLayout>

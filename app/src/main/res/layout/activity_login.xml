@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    tools:context="com.coruscate.centrecourt.UserInterface.Activity.LoginActivity">
+
+    <!-- Login progress -->
+    <ProgressBar
+        android:id="@+id/login_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone" />
+
+
+    <include layout="@layout/cannot_connect_internet" />
+
+    <ImageView
+        android:id="@+id/imgAppLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/unit_4dp"
+        android:layout_marginTop="@dimen/unit_64dp"
+        android:padding="@dimen/unit_8dp"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:id="@+id/linLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/unit_24dp"
+            android:layout_marginRight="@dimen/unit_24dp"
+            android:layout_toLeftOf="@+id/ImgEditName"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:textColorHint="@color/white">
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edittext_white_background"
+                android:focusable="true"
+                android:hint="Email"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white"
+
+                android:textSize="@dimen/unit_18dp"
+                app:fontStyle="regular" />
+
+            <requestFocus />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/unit_24dp"
+            android:layout_marginRight="@dimen/unit_24dp"
+            android:layout_marginTop="@dimen/unit_8dp"
+            android:layout_toLeftOf="@+id/ImgEditName"
+            android:layout_weight="1"
+            android:focusable="true"
+            android:textColorHint="@color/white">
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/unit_4dp"
+                android:background="@drawable/edittext_white_background"
+                android:focusable="true"
+                android:hint="Passsword"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/unit_18dp"
+                app:fontStyle="regular" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+            android:id="@+id/btnLogin"
+            style="?android:attr/selectableItemBackground"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/unit_24dp"
+            android:layout_marginRight="@dimen/unit_24dp"
+            android:layout_marginTop="@dimen/unit_16dp"
+            android:background="@drawable/button_selecter_round_corner"
+            android:text="Login"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/unit_18dp"
+            android:textStyle="bold"
+            app:fontStyle="regular" />
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+            android:id="@+id/txtfrgtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/unit_24dp"
+            android:layout_marginRight="@dimen/unit_24dp"
+            android:layout_marginTop="@dimen/unit_16dp"
+            android:clickable="true"
+            android:gravity="right"
+            android:text="Forgot Password?"
+            android:textColor="@android:color/white"
+            android:textSize="18dp"
+            app:fontStyle="regular" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/linLogin"
+        android:layout_marginLeft="@dimen/unit_24dp"
+        android:layout_marginRight="@dimen/unit_24dp"
+        android:layout_marginTop="@dimen/unit_64dp"
+        android:orientation="horizontal">
+
+        <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+            android:id="@+id/btnFacebookLogin"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1.0"
+            android:background="#3B5998"
+            android:drawableLeft="@drawable/icon_facebook"
+            android:padding="0dp"
+            android:text="Facebook"
+            android:textColor="@android:color/white"
+            app:fontStyle="regular" />
+
+        <!--  <com.google.android.gms.common.SignInButton
+              android:id="@+id/gmail_login_button"
+              android:layout_width="match_parent"
+              android:layout_height="48dp"
+              android:layout_marginBottom="0dp"
+              android:layout_marginLeft="@dimen/unit_8dp"
+              android:layout_weight="1.0" />-->
+        <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+            android:id="@+id/gmail_login_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1.0"
+            android:background="#F44336"
+            android:drawableLeft="@drawable/icon_google"
+            android:padding="0dp"
+            android:text="Gmail"
+            android:textColor="@android:color/white"
+            app:fontStyle="regular" />
+
+    </LinearLayout>
+
+    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+        android:id="@+id/txtBottomSignup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/unit_12dp"
+        android:paddingLeft="@dimen/unit_4dp"
+        android:paddingRight="@dimen/unit_4dp"
+        android:text="Don't have a acccount? Sign Up"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        app:fontStyle="regular" />
+
+
+</RelativeLayout>
+

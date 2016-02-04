@@ -1,0 +1,89 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/unit_8dp"
+    android:layout_marginRight="@dimen/unit_8dp"
+    android:layout_marginTop="@dimen/unit_8dp"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:orientation="vertical"
+    card_view:cardCornerRadius="@dimen/unit_3dp"
+    card_view:cardElevation="@dimen/unit_3dp">
+
+    <LinearLayout
+        android:id="@+id/rawLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/unit_8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/unit_24dp"
+                android:layout_marginTop="@dimen/unit_4dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:singleLine="true"
+                android:text="Name"
+                android:textSize="16dp"
+                app:fontStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/Imgpopupt"
+                android:layout_width="@dimen/unit_32dp"
+                android:layout_height="@dimen/unit_32dp"
+                android:layout_gravity="right"
+                android:padding="@dimen/unit_4dp"
+                android:src="@drawable/icon_popup" />
+        </LinearLayout>
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+            android:id="@+id/txtContactNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_4dp"
+            android:drawableLeft="@drawable/icon_call"
+            android:drawablePadding="@dimen/unit_4dp"
+            android:gravity="center"
+            android:text="9978196264"
+            android:textColor="@color/gray"
+            android:textSize="14dp"
+            app:fontStyle="regular" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_4dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/unit_24dp"
+                android:layout_height="@dimen/unit_24dp"
+                android:layout_gravity="top|left"
+                android:src="@drawable/icon_address" />
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/unit_4dp"
+                android:layout_marginTop="@dimen/unit_2dp"
+                android:text="Address"
+                android:textColor="@color/gray"
+                android:textSize="14dp"
+                app:fontStyle="regular" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

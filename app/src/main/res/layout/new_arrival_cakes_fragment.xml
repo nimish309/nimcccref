@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:baselineAligned="false">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/item_swipe_container_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/newArrivalCakesRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/layoutBaground"
+            android:fadeScrollbars="false"
+            android:scrollbarThumbVertical="@drawable/scrollthumb"
+            android:scrollbars="vertical" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <include layout="@layout/progressbar_nodata" />
+
+    <include
+        layout="@layout/fab"
+        android:visibility="visible" />
+</FrameLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/itemMyAccount"
+            android:checked="true"
+            android:title="MyAccount" />
+        <item
+            android:id="@+id/itemMyArrivals"
+            android:title="MyArrivals" />
+        <item
+            android:id="@+id/itemCakes"
+            />
+        <item
+            android:id="@+id/itemChocolates"
+             />
+        <item
+            android:id="@+id/itemFlowers"
+             />
+        <item
+            android:id="@+id/itemDessert"
+             />
+        <item
+            android:id="@+id/itemContactUs"
+             />
+    </group>
+
+
+</menu>

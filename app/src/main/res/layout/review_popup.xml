@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutReviewPopup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/unit_48dp"
+            android:background="@color/actionbar"
+            android:gravity="center"
+            android:text="Review"
+            android:textColor="@color/white"
+            android:textSize="@dimen/unit_18dp"
+            android:textStyle="bold"
+            app:fontStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/unit_8dp">
+
+            <RatingBar
+                android:id="@+id/rattingBar"
+                style="?android:attr/ratingBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:progressTint="@color/yellow"
+                android:stepSize="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/unit_8dp"
+            android:paddingRight="@dimen/unit_8dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                    android:id="@+id/etReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Add a review"
+                    android:maxLines="5"
+                    android:background="@drawable/edittext_selecter"
+                    android:imeOptions="actionDone"
+                    android:minLines="5" />
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+            android:id="@+id/btnClose"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="50"
+            android:background="@drawable/button_selecter_round_corner"
+            android:text="Close"
+            android:textColor="@color/white"
+            android:textSize="@dimen/unit_16dp" />
+
+        <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+            android:id="@+id/btnSend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="50"
+            android:background="@drawable/button_selecter_round_corner"
+            android:text="Send"
+            android:textColor="@color/white"
+            android:textSize="@dimen/unit_16dp" />
+    </LinearLayout>
+
+</RelativeLayout>

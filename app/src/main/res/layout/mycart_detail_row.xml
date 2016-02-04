@@ -1,0 +1,376 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/unit_8dp"
+    android:layout_marginRight="@dimen/unit_8dp"
+    android:layout_marginTop="@dimen/unit_8dp"
+    android:background="@android:color/white"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    card_view:cardCornerRadius="@dimen/unit_3dp"
+    card_view:cardElevation="@dimen/unit_3dp">
+
+    <com.marshalchen.ultimaterecyclerview.swipe.SwipeLayout
+        android:id="@+id/recyclerview_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/main_background_view"
+            android:layout_width="@dimen/unit_48dp"
+            android:layout_height="match_parent"
+            android:background="@color/actionbar"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/unit_10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imgWishList"
+                android:layout_width="@dimen/unit_24dp"
+                android:layout_height="@dimen/unit_24dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_favorite_white" />
+
+            <ImageView
+                android:id="@+id/imgDelete"
+                android:layout_width="@dimen/unit_24dp"
+                android:layout_height="@dimen/unit_24dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:src="@drawable/ic_delete_white_18dp" />
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/linearlayoutmain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ImgRowImage"
+                    android:layout_width="@dimen/unit_100dp"
+                    android:layout_height="@dimen/unit_100dp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/unit_10dp" />
+
+                <LinearLayout
+                    android:id="@+id/linearlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/ImgRowImage"
+                    android:orientation="vertical"
+                    android:paddingRight="@dimen/unit_5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                            android:id="@+id/txtName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/unit_4dp"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            android:padding="@dimen/unit_1dp"
+                            android:textSize="@dimen/unit_14dp"
+                            android:visibility="visible"
+                            app:fontStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_2dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/unit_1dp"
+                                android:singleLine="true"
+                                android:text="SKU : "
+                                android:textSize="@dimen/unit_10dp"
+                                app:fontStyle="regular" />
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:id="@+id/txtSku"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/unit_1dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/unit_10dp"
+                                app:fontStyle="regular" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearWeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:visibility="invisible">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/unit_1dp"
+                                android:singleLine="true"
+                                android:text="Weight : "
+                                android:textSize="@dimen/unit_10dp"
+                                app:fontStyle="regular" />
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:id="@+id/txtWeight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/unit_1dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/unit_10dp"
+                                app:fontStyle="regular" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/linearFlavour"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:visibility="invisible">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/unit_1dp"
+                                android:singleLine="true"
+                                android:text="Flavour : "
+                                android:textSize="@dimen/unit_10dp"
+                                app:fontStyle="regular" />
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:id="@+id/txtFlavour"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:padding="@dimen/unit_1dp"
+                                android:singleLine="true"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/unit_10dp"
+                                app:fontStyle="regular" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linMsgOnCake"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/unit_1dp"
+                                android:singleLine="true"
+                                android:text="Message On Cake : "
+                                android:textSize="@dimen/unit_10dp"
+                                app:fontStyle="regular" />
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:id="@+id/txtMsgOnCake"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:padding="@dimen/unit_1dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/unit_10dp"
+                                app:fontStyle="regular" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linSpecialIns"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/unit_1dp"
+                                android:singleLine="true"
+                                android:text="Instruction : "
+                                android:textSize="@dimen/unit_10dp"
+                                app:fontStyle="regular" />
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:id="@+id/txtSpecialIns"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:marqueeRepeatLimit="marquee_forever"
+                                android:padding="@dimen/unit_1dp"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/unit_10dp"
+                                app:fontStyle="regular" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:id="@+id/txtNewSession"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/unit_1dp"
+                        android:singleLine="true"
+                        android:textSize="14dp"
+                        android:visibility="gone"
+                        app:fontStyle="regular" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/unit_2dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imgDecrease"
+                                android:layout_width="@dimen/unit_28dp"
+                                android:layout_height="@dimen/unit_28dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/unit_2dp"
+                                android:layout_weight="1"
+                                android:padding="@dimen/unit_2dp"
+                                android:src="@drawable/ic_remove_circle_black_24dp" />
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:id="@+id/txtTotal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="@dimen/unit_5dp"
+                                android:layout_marginRight="@dimen/unit_5dp"
+                                android:padding="@dimen/unit_2dp"
+                                android:textSize="16dp"
+                                app:fontStyle="regular" />
+
+                            <ImageView
+                                android:id="@+id/imgIncrease"
+                                android:layout_width="@dimen/unit_28dp"
+                                android:layout_height="@dimen/unit_28dp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="1"
+                                android:padding="@dimen/unit_2dp"
+                                android:src="@drawable/ic_add_circle_black_24dp" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBarRow"
+                                android:layout_width="@dimen/unit_28dp"
+                                android:layout_height="@dimen/unit_28dp"
+                                android:background="@android:color/transparent"
+                                android:indeterminate="true"
+                                android:indeterminateTint="@android:color/black"
+                                android:indeterminateTintMode="src_atop"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/unit_10dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:id="@+id/txtRupeesSymbol"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:padding="@dimen/unit_2dp"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/unit_16dp"
+                                app:fontStyle="regular" />
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:id="@+id/txtPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/unit_2dp"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/unit_16dp"
+                                app:fontStyle="regular" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtDeliveryDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearlayoutmain"
+                android:layout_marginLeft="@dimen/unit_8dp"
+                android:layout_marginTop="@dimen/unit_5dp"
+                android:drawablePadding="@dimen/unit_5dp"
+                android:drawableRight="@drawable/icon_date_2"
+                android:textSize="@dimen/unit_14dp"
+                android:visibility="visible"
+                app:fontStyle="regular" />
+
+
+            <ImageView
+                android:id="@+id/imgIconWithOrWithoutEgg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txtDeliveryDate"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/unit_4dp"
+                android:src="@drawable/icon_egg"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </com.marshalchen.ultimaterecyclerview.swipe.SwipeLayout>
+
+</android.support.v7.widget.CardView>

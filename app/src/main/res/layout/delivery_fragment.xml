@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackground"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/unit_8dp"
+        android:layout_marginRight="@dimen/unit_8dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_8dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            card_view:cardCornerRadius="@dimen/unit_3dp"
+            card_view:cardElevation="@dimen/unit_3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/unit_8dp">
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                    android:id="@+id/etDeliveryMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/unit_4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_selecter"
+                    android:drawablePadding="7dp"
+                    android:drawableRight="@drawable/ic_arrow_drop_down_grey_600_24dp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="Delivery Mode"
+                    android:imeOptions="actionNext"
+                    android:maxEms="10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/unit_14dp" />
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                    android:id="@+id/etPaymentMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/unit_4dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_selecter"
+                    android:drawablePadding="7dp"
+                    android:drawableRight="@drawable/ic_arrow_drop_down_grey_600_24dp"
+                    android:editable="false"
+                    android:focusable="false"
+                    android:hint="Payment Mode"
+                    android:imeOptions="actionNext"
+                    android:maxEms="10"
+                    android:singleLine="true"
+                    android:textSize="@dimen/unit_14dp" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:id="@+id/liniarLayoutAddressDetail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_8dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:orientation="vertical"
+                card_view:cardCornerRadius="@dimen/unit_3dp"
+                card_view:cardElevation="@dimen/unit_3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/unit_8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Shipping Address"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/unit_18dp"
+                            android:textStyle="bold"
+                            app:fontStyle="bold" />
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                            android:id="@+id/txtChangeAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Change"
+                            android:textColor="@color/actionbar"
+                            android:textSize="@dimen/unit_16dp"
+                            android:textStyle="bold"
+                            app:fontStyle="bold" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="@dimen/unit_4dp"
+                        android:background="@color/actionbar" />
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:id="@+id/txtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_8dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textSize="@dimen/unit_16dp"
+                        android:textStyle="bold"
+                        app:fontStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/unit_4dp"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="Contact No : "
+                            android:textSize="@dimen/unit_14dp"
+                            android:textStyle="bold"
+                            app:fontStyle="bold" />
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                            android:id="@+id/txtContact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/unit_4dp"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textSize="@dimen/unit_14dp"
+                            app:fontStyle="regular" />
+                    </LinearLayout>
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:id="@+id/txtAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_8dp"
+                        android:gravity="left"
+                        android:textSize="@dimen/unit_14dp"
+                        app:fontStyle="regular" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardBillingAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_8dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            card_view:cardCornerRadius="@dimen/unit_3dp"
+            card_view:cardElevation="@dimen/unit_3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/unit_8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Billing Address"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/unit_18dp"
+                        android:textStyle="bold"
+                        app:fontStyle="bold" />
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:id="@+id/txtChangeAddress1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Change"
+                        android:textColor="@color/actionbar"
+                        android:textSize="@dimen/unit_16dp"
+                        android:textStyle="bold"
+                        app:fontStyle="bold" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/unit_4dp"
+                    android:background="@color/actionbar" />
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                    android:id="@+id/txtName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/unit_8dp"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textSize="@dimen/unit_16dp"
+                    android:textStyle="bold"
+                    app:fontStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_4dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="Contact No : "
+                        android:textSize="@dimen/unit_14dp"
+                        android:textStyle="bold"
+                        app:fontStyle="bold" />
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:id="@+id/txtContact1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_4dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textSize="@dimen/unit_14dp"
+                        app:fontStyle="regular" />
+                </LinearLayout>
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                    android:id="@+id/txtAddress1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/unit_8dp"
+                    android:gravity="left"
+                    android:textSize="@dimen/unit_14dp"
+                    app:fontStyle="regular" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_8dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            card_view:cardCornerRadius="@dimen/unit_3dp"
+            card_view:cardElevation="@dimen/unit_3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/unit_8dp">
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Order Details"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/unit_18dp"
+                    android:textStyle="bold"
+                    app:fontStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/unit_4dp"
+                    android:background="@color/actionbar" />
+
+                <LinearLayout
+                    android:id="@+id/layoutOrderItemDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/unit_8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layoutTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/unit_4dp">
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                            android:layout_width="@dimen/unit_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:gravity="center"
+                            android:text="Detail"
+                            android:textSize="@dimen/unit_14dp"
+                            app:fontStyle="bold" />
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                            android:layout_width="@dimen/unit_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:text="Qty"
+                            android:textSize="@dimen/unit_14dp"
+                            app:fontStyle="bold" />
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                            android:layout_width="@dimen/unit_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="3"
+                            android:gravity="right"
+                            android:text="Price"
+                            android:textSize="@dimen/unit_14dp"
+                            app:fontStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/unit_12dp"
+                    android:orientation="horizontal">
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                        android:id="@+id/etCoupanCode"
+                        android:layout_width="@dimen/unit_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginRight="@dimen/unit_8dp"
+                        android:layout_weight="2"
+                        android:background="@drawable/edittext_selecter"
+                        android:gravity="center"
+                        android:hint="Coupon Code"
+                        android:textSize="@dimen/unit_14dp" />
+
+                    <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+                        android:id="@+id/btnCheckCoupan"
+                        android:layout_width="@dimen/unit_0dp"
+                        android:layout_height="@dimen/unit_32dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_selecter_round_corner"
+                        android:text="Check"
+                        android:textAllCaps="false"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/unit_14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/unit_16dp"
+                    android:orientation="horizontal">
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:text="Delivery Date : "
+                        android:textSize="@dimen/unit_14dp"
+                        android:textStyle="bold"
+                        app:fontStyle="bold" />
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:id="@+id/txtDeliveryDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textSize="@dimen/unit_14dp"
+                        app:fontStyle="regular" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_8dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:visibility="gone"
+            card_view:cardCornerRadius="@dimen/unit_3dp"
+            card_view:cardElevation="@dimen/unit_3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/unit_8dp">
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Amount Details"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/unit_18dp"
+                    android:textStyle="bold"
+                    app:fontStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="@dimen/unit_4dp"
+                    android:background="@color/actionbar" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/unit_16dp"
+                    android:background="@drawable/border"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/unit_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="7"
+                        android:orientation="vertical"
+                        android:paddingBottom="@dimen/unit_8dp"
+                        android:paddingLeft="@dimen/unit_8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/unit_8dp"
+                            android:orientation="horizontal">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:layout_width="@dimen/unit_0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="Quantity : "
+                                android:textSize="@dimen/unit_14dp"
+                                app:fontStyle="bold" />
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:id="@+id/txtQuantity"
+                                android:layout_width="@dimen/unit_0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textSize="@dimen/unit_14dp"
+                                app:fontStyle="regular" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/unit_4dp"
+                            android:orientation="horizontal">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:layout_width="@dimen/unit_0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="6"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:text="Delivery Charge : "
+                                android:textSize="@dimen/unit_14dp"
+                                app:fontStyle="bold" />
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:id="@+id/txtDeliveryCharge"
+                                android:layout_width="@dimen/unit_0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="4"
+                                android:ellipsize="end"
+                                android:singleLine="true"
+                                android:textSize="@dimen/unit_14dp"
+                                app:fontStyle="regular" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:id="@+id/txtTotalAmount"
+                        android:layout_width="@dimen/unit_0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:background="@color/activityBackground"
+                        android:gravity="center"
+                        android:textColor="@color/actionbar"
+                        android:textStyle="bold"
+                        app:fontStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+            android:id="@+id/btnMakePayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/unit_8dp"
+            android:layout_marginTop="@dimen/unit_8dp"
+            android:background="@drawable/button_selecter_round_corner"
+            android:text="Place Order"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            app:fontStyle="regular" />
+    </LinearLayout>
+</ScrollView>

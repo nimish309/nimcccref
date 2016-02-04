@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackground">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/activityBackground">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:fitsSystemWindows="true">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="scroll|enterAlways">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/unit_12dp"
+                    android:orientation="vertical">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+
+                    <com.cepheuen.progresspageindicator.ProgressPageIndicator
+                        android:id="@+id/indicator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/unit_8dp" />
+
+                </LinearLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/anim_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/actionbar"
+            android:backgroundTint="@color/activityBackground"
+            android:fitsSystemWindows="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/activityBackground"
+                android:orientation="vertical"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="48dp">
+
+
+                <FrameLayout
+                    android:id="@+id/imgFrameLayout"
+                    android:layout_width="@dimen/unit_96dp"
+                    android:layout_height="@dimen/unit_96dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/ImgUploadImage"
+                        android:layout_width="96dp"
+                        android:layout_height="@dimen/unit_96dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hart_cake" />
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_gravity="right"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_edit_white_24dp" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                            android:id="@+id/txtName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/unit_16dp"
+                            app:fontStyle="regular" />
+
+                        <LinearLayout
+                            android:id="@+id/layoutRatingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="@dimen/unit_3dp"
+                            android:layout_marginTop="@dimen/unit_3dp"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/imgIconEgg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_egg"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/imgIconEggLess"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/icon_egg_less"
+                                android:visibility="gone" />
+
+
+                            <RatingBar
+                                android:id="@+id/rattingBar"
+                                style="?android:attr/ratingBarStyleSmall"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:numStars="5"
+                                android:progressTint="@color/yellow"
+                                android:rating="3.5"
+                                android:stepSize="0.5"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:id="@+id/txtNewSession"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/unit_4dp"
+                                android:padding="@dimen/unit_1dp"
+                                android:textSize="@dimen/unit_14dp"
+                                app:fontStyle="regular" />
+
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:id="@+id/txtPricePerUnit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="safasf"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/unit_14dp"
+                                android:visibility="gone"
+                                app:fontStyle="regular" />
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:id="@+id/txtPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/unit_14dp"
+                                app:fontStyle="bold" />
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                                android:id="@+id/txtPriceDetail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="34dp"
+                                android:textColor="@color/gray"
+                                android:textSize="@dimen/unit_14dp"
+                                android:visibility="visible"
+                                app:fontStyle="regular" />
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/ImgWishList"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:padding="@dimen/unit_6dp"
+                            android:src="@drawable/icon_heart_1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutItemAvailLable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_4dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Availability: "
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/unit_16dp"
+                            app:fontStyle="regular" />
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                            android:id="@+id/txtInStock"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/unit_16dp"
+                            app:fontStyle="regular" />
+                    </LinearLayout>
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:id="@+id/txtAvailable"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_4dp"
+                        android:gravity="center"
+                        android:textSize="@dimen/unit_14dp"
+                        app:fontStyle="bold" />
+
+                </LinearLayout>
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/unit_8dp"
+                    android:text="Details"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/unit_16dp"
+                    android:visibility="gone"
+                    app:fontStyle="bold" />
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                    android:id="@+id/txtDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/unit_4dp"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/unit_14dp"
+                    android:visibility="gone"
+                    app:fontStyle="regular" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/unit_8dp"
+                    android:orientation="horizontal">
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/unit_4dp"
+                        android:layout_marginRight="@dimen/unit_4dp"
+                        android:layout_marginTop="@dimen/unit_4dp"
+                        android:layout_toLeftOf="@+id/ImgEditName"
+                        android:layout_weight="1">
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                            android:id="@+id/txtQuantity"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_selecter"
+                            android:drawablePadding="7dp"
+                            android:drawableRight="@drawable/ic_arrow_drop_down_grey_600_24dp"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="Quantity"
+                            android:imeOptions="actionNext"
+                            android:maxEms="10"
+                            android:singleLine="true"
+                            android:textSize="14dp"
+                            app:fontStyle="regular" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/txtInputWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/unit_4dp"
+                        android:layout_toLeftOf="@+id/ImgEditName"
+                        android:layout_weight="1">
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                            android:id="@+id/txtWeight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_selecter"
+                            android:drawablePadding="7dp"
+                            android:drawableRight="@drawable/ic_arrow_drop_down_grey_600_24dp"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="Weight"
+                            android:imeOptions="actionNext"
+                            android:maxEms="10"
+                            android:singleLine="true"
+                            android:textSize="14dp"
+                            app:fontStyle="regular" />
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/txtInputFlavour"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/unit_8dp"
+                    android:layout_toLeftOf="@+id/ImgEditName"
+                    android:layout_weight="1">
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                        android:id="@+id/txtflavours"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_selecter"
+                        android:drawablePadding="7dp"
+                        android:drawableRight="@drawable/ic_arrow_drop_down_grey_600_24dp"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="Flavour"
+                        android:imeOptions="actionNext"
+                        android:maxEms="10"
+                        android:singleLine="true"
+                        android:textSize="14dp"
+                        app:fontStyle="regular" />
+                </android.support.design.widget.TextInputLayout>
+
+
+                <RadioGroup
+                    android:id="@+id/radioButtonGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/unit_8dp"
+                    android:orientation="horizontal">
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedRadioButton
+                        android:id="@+id/radiobuttonWithegg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="With egg"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        app:fontStyle="regular" />
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedRadioButton
+                        android:id="@+id/radiobuttonWithoutegg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Without egg"
+                        android:textColor="@color/gray"
+                        android:textSize="14dp"
+                        app:fontStyle="regular" />
+                </RadioGroup>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/unit_8dp"
+                    android:orientation="horizontal">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/unit_4dp"
+                        android:layout_marginTop="@dimen/unit_4dp"
+                        android:layout_toLeftOf="@+id/ImgEditName"
+                        android:layout_weight="1">
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                            android:id="@+id/txtDeliveryDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_selecter"
+                            android:drawablePadding="7dp"
+                            android:drawableRight="@drawable/ic_arrow_drop_down_grey_600_24dp"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="Delivery Date"
+                            android:imeOptions="actionNext"
+                            android:maxEms="10"
+                            android:singleLine="true"
+                            android:textSize="14dp"
+                            app:fontStyle="regular" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/unit_4dp"
+                        android:layout_marginTop="@dimen/unit_4dp"
+                        android:layout_toLeftOf="@+id/ImgEditName"
+                        android:layout_weight="1">
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                            android:id="@+id/txtDeliveryTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_selecter"
+                            android:drawablePadding="7dp"
+                            android:drawableRight="@drawable/ic_arrow_drop_down_grey_600_24dp"
+                            android:editable="false"
+                            android:focusable="false"
+                            android:hint="Delivery Time"
+                            android:imeOptions="actionNext"
+                            android:maxEms="10"
+                            android:singleLine="true"
+                            android:textSize="14dp"
+                            app:fontStyle="regular" />
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:id="@+id/txtDeliveryInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_8dp"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/unit_8dp"
+                        android:paddingRight="@dimen/unit_8dp"
+                        android:paddingTop="@dimen/unit_8dp"
+                        android:text="Delivery Date/Time ?"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/unit_12dp"
+                        app:fontStyle="regular" />
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:id="@+id/txtAvailabilityInfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_8dp"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:padding="@dimen/unit_8dp"
+                        android:text="Check Availability ?"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/unit_12dp"
+                        app:fontStyle="regular" />
+
+                </LinearLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/unit_8dp"
+                    android:layout_toLeftOf="@+id/ImgEditName"
+                    android:layout_weight="1">
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                        android:id="@+id/edtxtMessageOnCakes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_selecter"
+                        android:drawablePadding="7dp"
+                        android:hint="Message on cakes"
+                        android:imeOptions="actionNext"
+                        android:maxEms="10"
+                        android:singleLine="true"
+                        android:textSize="16dp"
+                        app:fontStyle="regular" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedCheckBox
+                    android:id="@+id/checkboxnoMsg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/unit_10dp"
+                    android:text="No Message on cake"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/unit_12dp" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="@dimen/unit_8dp"
+                    android:layout_toLeftOf="@+id/ImgEditName"
+                    android:layout_weight="1">
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                        android:id="@+id/edtxtSpecialInstruction"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edittext_selecter"
+                        android:drawablePadding="7dp"
+                        android:hint="Special Instruction"
+                        android:imeOptions="actionNext"
+                        android:maxEms="10"
+                        android:singleLine="true"
+                        android:textSize="16dp"
+                        app:fontStyle="regular" />
+                </android.support.design.widget.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/unit_16dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:id="@+id/txtCutomerReview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Customer Reviews"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/unit_16dp"
+                        app:fontStyle="bold" />
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:id="@+id/txtCustomerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="name"
+                        android:textSize="16dp"
+                        app:fontStyle="regular" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_1dp">
+
+                        <RatingBar
+                            android:id="@+id/customerRattingBar"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:numStars="5"
+                            android:progressTint="@color/yellow"
+                            android:rating="3"
+                            android:stepSize="0.5" />
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                            android:id="@+id/txtDays"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="2 day ago"
+                            android:textSize="14dp"
+                            app:fontStyle="regular" />
+                    </RelativeLayout>
+
+                    <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                        android:id="@+id/txtDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Loreum Ipseum Loreum Ipseum Loreum Ipseum Loreum Ipseum Loreum Ipseum Loreum Ipseum Loreum Ipseum Loreum Ipseum Loreum Ipseum "
+                        android:textSize="14dp"
+                        app:fontStyle="regular" />
+
+                </LinearLayout>
+
+                <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                    android:id="@+id/txtViewMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/unit_4dp"
+                    android:layout_marginTop="@dimen/unit_8dp"
+                    android:drawableLeft="@drawable/icon_viewall"
+                    android:drawablePadding="@dimen/unit_8dp"
+                    android:gravity="center"
+                    android:text="View all reviews"
+                    android:textColor="@color/indicator_1"
+                    android:textSize="14dp"
+                    android:visibility="gone"
+                    app:fontStyle="regular" />
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/floatingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:background="@drawable/fab_selector"
+            android:clickable="true"
+            android:src="@drawable/icon_camera"
+            android:visibility="gone"
+            app:layout_anchorGravity="bottom|right|end" />
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingButtonAddtocart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/unit_8dp"
+        android:background="@drawable/fab_selector"
+        android:clickable="true"
+        android:src="@drawable/ic_add_shopping_cart_white_18dp" />
+</RelativeLayout>

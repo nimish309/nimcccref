@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/unit_5dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardViewCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/unit_10dp"
+        android:layout_marginTop="@dimen/unit_10dp">
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+            android:id="@+id/edtxtCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/unit_10dp"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="Country"
+            android:textSize="@dimen/unit_14dp"
+            android:imeOptions="actionDone"
+            android:visibility="visible"
+            app:fontStyle="regular"/>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/cardViewCountry"
+        android:id="@+id/cardViewCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/unit_10dp"
+        android:layout_marginTop="@dimen/unit_10dp">
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+            android:id="@+id/edtxtCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/unit_10dp"
+            android:gravity="top|left"
+            android:hint="City"
+            android:background="@null"
+            android:textSize="@dimen/unit_14dp"
+            android:imeOptions="actionDone"
+            android:visibility="visible"
+            app:fontStyle="regular"/>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/cardViewCity"
+        android:id="@+id/cardViewState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/unit_10dp"
+        android:layout_marginTop="@dimen/unit_10dp">
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+            android:id="@+id/edtxtState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/unit_10dp"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="State/Region/Provience"
+            android:textSize="@dimen/unit_14dp"
+            android:imeOptions="actionDone"
+            android:visibility="visible"
+            app:fontStyle="regular"/>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/cardViewState"
+        android:id="@+id/cardViewZipCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/unit_10dp"
+        android:layout_marginTop="@dimen/unit_10dp">
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+            android:id="@+id/edtxtZipCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/unit_10dp"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="Zip Code"
+            android:textSize="@dimen/unit_14dp"
+            android:imeOptions="actionDone"
+            android:visibility="visible"
+            app:fontStyle="regular"/>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/cardViewZipCode"
+        android:id="@+id/cardViewAddress1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/unit_10dp"
+        android:layout_marginTop="@dimen/unit_10dp">
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+            android:id="@+id/edtxtAddress1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/unit_10dp"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="Address1"
+            android:textSize="@dimen/unit_14dp"
+            android:imeOptions="actionDone"
+            android:visibility="visible"
+            app:fontStyle="regular"/>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/cardViewAddress1"
+        android:id="@+id/cardViewAddress2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/unit_10dp"
+        android:layout_marginTop="@dimen/unit_10dp">
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+            android:id="@+id/edtxtAddress2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/unit_10dp"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="Address2"
+            android:textSize="@dimen/unit_14dp"
+            android:imeOptions="actionDone"
+            android:visibility="visible"
+            app:fontStyle="regular"/>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_below="@id/cardViewAddress2"
+        android:id="@+id/cardViewComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="@dimen/unit_10dp"
+        android:layout_marginTop="@dimen/unit_10dp">
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+            android:id="@+id/edtxtComment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/unit_10dp"
+            android:background="@null"
+            android:gravity="top|left"
+            android:hint="Comment"
+            android:minLines="4"
+            android:maxLines="10"
+            android:textSize="@dimen/unit_14dp"
+            android:imeOptions="actionDone"
+            android:visibility="visible"
+            app:fontStyle="regular"/>
+
+    </android.support.v7.widget.CardView>
+    <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/unit_10dp"
+        android:textSize="16dp"
+        android:background="@drawable/button_selecter_round_corner"
+        android:text="NEXT"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:fontStyle="regular" />
+</RelativeLayout>

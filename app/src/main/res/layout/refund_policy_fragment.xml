@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/layoutBaground"
+    android:padding="@dimen/unit_5dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/layoutBaground">
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtReturnPolicyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/unit_1dp"
+                android:singleLine="true"
+                android:text="ReturnPolicy"
+                android:textSize="16dp"
+                app:fontStyle="regular" />
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtReturnPolicyDiscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/unit_2dp"
+                android:padding="@dimen/unit_1dp"
+                android:singleLine="true"
+                android:text="ReturnPolicy Description"
+                android:textSize="14dp"
+                app:fontStyle="light" />
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtRefundPolicyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/unit_2dp"
+                android:padding="@dimen/unit_1dp"
+                android:singleLine="true"
+                android:text="RefundPolicy"
+                android:textSize="16dp"
+                app:fontStyle="regular" />
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtRefundPolicyDiscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/unit_2dp"
+                android:padding="@dimen/unit_1dp"
+                android:singleLine="true"
+                android:text="RefundPolicy Discription"
+                android:textSize="14dp"
+                app:fontStyle="light" />
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtCancelationPolicyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/unit_2dp"
+                android:padding="@dimen/unit_1dp"
+                android:singleLine="true"
+                android:text="CancelationPolicy"
+                android:textSize="16dp"
+                app:fontStyle="regular" />
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+                android:id="@+id/txtCancelationPolicyDiscription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/unit_2dp"
+                android:padding="@dimen/unit_1dp"
+                android:singleLine="true"
+                android:text="CancelationPolicy Discription"
+                android:textSize="14dp"
+                app:fontStyle="light" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

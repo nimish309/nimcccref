@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.coruscate.centrecourt.UserInterface.Activity.ItemReviewActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/layoutWriteReview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/unit_40dp"
+        android:background="@color/layoutBaground"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/unit_40dp"
+            android:id="@+id/txtReview"
+            android:drawableLeft="@drawable/icon_review"
+            android:drawablePadding="@dimen/unit_4dp"
+            android:gravity="center"
+            android:text="Write a Review"
+            android:textAllCaps="false"
+            android:textColor="@color/actionbar"
+            app:fontStyle="regular" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/itemReviewRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/layoutBaground"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/scrollthumb"
+        android:scrollbars="vertical" />
+
+    <include layout="@layout/progressbar_nodata" />
+</LinearLayout>

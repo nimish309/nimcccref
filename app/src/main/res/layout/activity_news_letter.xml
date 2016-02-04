@@ -1,0 +1,107 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackground"
+    android:orientation="vertical"
+    tools:context="com.coruscate.centrecourt.UserInterface.Activity.NewsLetterActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/unit_16dp">
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_8dp"
+            android:text="Subscribe/Unsubscribe"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/unit_18dp"
+            android:textStyle="bold"
+            app:fontStyle="bold" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_12dp"
+            android:focusable="true">
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/unit_16dp"
+                android:background="@drawable/edittext_selecter"
+                android:focusable="true"
+                android:hint="Enter your email address here"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textSize="@dimen/unit_18dp"
+                app:fontStyle="regular" />
+        </android.support.design.widget.TextInputLayout>
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_16dp"
+            android:text="Subscribe"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/unit_16dp"
+            app:fontStyle="regular" />
+
+        <RadioGroup
+            android:id="@+id/radioButtonGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_16dp"
+            android:orientation="horizontal">
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedRadioButton
+                android:id="@+id/radiobuttonSubscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:paddingRight="@dimen/unit_16dp"
+                android:text="yes"
+                android:textColor="@android:color/black"
+                android:textSize="14dp"
+                app:fontStyle="regular" />
+
+            <com.coruscate.centrecourt.CustomControls.TypefacedRadioButton
+                android:id="@+id/radiobuttonUnSubscribe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/unit_16dp"
+                android:paddingRight="@dimen/unit_16dp"
+                android:text="No"
+                android:textColor="@android:color/black"
+                android:textSize="14dp"
+                app:fontStyle="regular" />
+
+
+        </RadioGroup>
+
+        <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+            android:id="@+id/btnSubmit"
+            style="?android:attr/selectableItemBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/unit_16dp"
+            android:background="@drawable/button_selecter_round_corner"
+            android:paddingLeft="@dimen/unit_8dp"
+            android:paddingRight="@dimen/unit_8dp"
+            android:text="Submit"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/unit_18dp"
+            android:textStyle="bold"
+            app:fontStyle="regular" />
+
+    </LinearLayout>
+</LinearLayout>

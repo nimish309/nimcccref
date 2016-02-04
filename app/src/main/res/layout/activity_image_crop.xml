@@ -1,0 +1,231 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackground">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:visibility="visible" />
+
+    <HorizontalScrollView
+        android:id="@+id/tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/activityBackground">
+
+        <LinearLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/buttonRotateImage"
+                android:layout_width="@dimen/unit_32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="@dimen/unit_10dp"
+                android:background="@drawable/button_selecter_round_corner"
+                android:padding="4dp"
+                android:src="@drawable/ic_rotate_left_white_24dp"
+                android:textColor="@color/base"
+                android:textSize="@dimen/unit_16dp" />
+
+            <Button
+                android:id="@+id/buttonDone"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/unit_32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="@dimen/unit_3dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="@dimen/unit_3dp"
+                android:layout_marginTop="@dimen/unit_3dp"
+                android:background="@drawable/button_selecter_round_corner"
+                android:text="Save"
+                android:textColor="@color/base"
+                android:textSize="@dimen/unit_16dp" />
+
+            <Button
+                android:id="@+id/buttonCancel"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/unit_10dp"
+                android:background="@drawable/button_selecter_round_corner"
+                android:padding="3dp"
+                android:text="X"
+                android:textColor="@color/base"
+                android:textStyle="bold"
+                android:textSize="@dimen/unit_16dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/buttonFree"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/unit_32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="3dp"
+                android:background="@drawable/button_selecter_round_corner"
+                android:padding="3dp"
+                android:text="FREE"
+                android:textColor="@color/base"
+                android:textSize="@dimen/unit_16dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/buttonCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/unit_32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="3dp"
+                android:background="@drawable/button_selecter_round_corner"
+                android:padding="3dp"
+                android:text="CIRCLE"
+                android:textColor="@color/base"
+                android:textSize="@dimen/unit_16dp"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/buttonFitImage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/unit_32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="3dp"
+                android:background="@drawable/button_selecter_round_corner"
+                android:gravity="center_vertical"
+                android:padding="3dp"
+                android:text="FIT IMAGE"
+                android:textColor="@color/base"
+                android:textSize="@dimen/unit_16dp"
+                android:visibility="gone" />
+
+
+            <Button
+                android:id="@+id/button1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/unit_32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="3dp"
+                android:background="@drawable/button_selecter_round_corner"
+                android:padding="3dp"
+                android:text="1:1"
+                android:textColor="@color/base"
+                android:textSize="@dimen/unit_16dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button3_4"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/unit_32dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="3dp"
+                android:background="@drawable/button_selecter_round_corner"
+                android:padding="3dp"
+                android:text="3:4"
+                android:textColor="@color/base"
+                android:textSize="@dimen/unit_16dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button4_3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/unit_32dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/button_selecter_round_corner"
+
+                android:padding="3dp"
+                android:text="4:3"
+                android:textColor="@color/base"
+                android:textSize="@dimen/unit_16dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button9_16"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/unit_32dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/button_selecter_round_corner"
+
+                android:padding="3dp"
+                android:text="9:16"
+                android:textColor="@color/base"
+                android:textSize="@dimen/unit_16dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/button16_9"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/unit_32dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/button_selecter_round_corner"
+
+                android:padding="3dp"
+                android:text="16:9"
+                android:textColor="@color/base"
+                android:textSize="@dimen/unit_16dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/buttonCustom"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/unit_32dp"
+                android:layout_margin="3dp"
+                android:background="@drawable/button_selecter_round_corner"
+                android:padding="3dp"
+                android:text="7:5"
+                android:textColor="@color/base"
+                android:textSize="@dimen/unit_16dp"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <com.coruscate.centrecourt.CustomControls.CropImageView
+        android:id="@+id/cropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tab_bar"
+        android:paddingBottom="64dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="32dp"
+        android:layout_below="@id/toolbar"
+        custom:backgroundColor="@color/activityBackground"
+        custom:cropMode="ratio_fit_image"
+        custom:frameColor="@color/frame"
+        custom:frameStrokeWeight="1dp"
+        custom:guideColor="@color/guide"
+        custom:guideShowMode="show_on_touch"
+        custom:guideStrokeWeight="1dp"
+        custom:handleColor="@color/handle"
+        custom:handleShowMode="show_always"
+        custom:handleSize="8dp"
+        custom:minFrameSize="50dp"
+        custom:overlayColor="@color/overlay"
+        custom:touchPadding="8dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/cropImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

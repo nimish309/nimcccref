@@ -1,0 +1,278 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackground"
+    android:orientation="vertical"
+    tools:context="com.coruscate.centrecourt.UserInterface.Activity.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/unit_8dp"
+                android:layout_marginRight="@dimen/unit_8dp"
+                android:layout_marginTop="@dimen/unit_8dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_8dp"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="@dimen/unit_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="@dimen/unit_4dp"
+                            android:layout_weight="1"
+                            android:focusable="true">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                                android:id="@+id/etFirstName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_selecter"
+                                android:focusable="true"
+                                android:hint="First name *"
+                                android:imeOptions="actionNext"
+                                android:nextFocusForward="@+id/etLastName"
+                                android:singleLine="true"
+                                app:fontStyle="regular" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="@dimen/unit_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/unit_4dp"
+                            android:layout_weight="1"
+                            android:focusable="true">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                                android:id="@+id/etLastName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_selecter"
+                                android:focusable="true"
+                                android:hint="Last name"
+                                android:imeOptions="actionNext"
+                                android:nextFocusForward="@+id/etMobileNo"
+                                android:singleLine="true"
+                                app:fontStyle="regular" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_12dp"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="@dimen/unit_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="@dimen/unit_4dp"
+                            android:layout_weight="1"
+                            android:focusable="true">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                                android:id="@+id/etMobileNo"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_selecter"
+                                android:focusable="true"
+                                android:hint="Mobile No *"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:nextFocusForward="@+id/etAddress"
+                                android:singleLine="true"
+                                app:fontStyle="regular" />
+                        </android.support.design.widget.TextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/unit_12dp"
+                        android:focusable="true">
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                            android:id="@+id/etAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_selecter"
+                            android:drawablePadding="7dp"
+                            android:focusable="true"
+                            android:gravity="top|left"
+                            android:hint="Line 1"
+                            android:imeOptions="actionNext"
+                            android:nextFocusForward="@+id/etAddress2"
+                            android:singleLine="true"
+                            app:fontStyle="regular" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="@dimen/unit_12dp"
+                        android:focusable="true">
+
+                        <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                            android:id="@+id/etAddress2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edittext_selecter"
+                            android:drawablePadding="7dp"
+                            android:focusable="true"
+                            android:gravity="top|left"
+                            android:hint="Line 2"
+                            android:imeOptions="actionNext"
+                            android:nextFocusForward="@+id/etCity"
+                            android:singleLine="true"
+                            app:fontStyle="regular" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_12dp"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="@dimen/unit_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="@dimen/unit_4dp"
+                            android:layout_weight="1"
+                            android:focusable="true">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                                android:id="@+id/etCity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_selecter"
+                                android:focusable="true"
+                                android:hint="City *"
+                                android:imeOptions="actionNext"
+                                android:nextFocusForward="@+id/etState"
+                                android:singleLine="true"
+                                app:fontStyle="regular" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="@dimen/unit_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/unit_4dp"
+                            android:layout_weight="1"
+                            android:focusable="true">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                                android:id="@+id/etState"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_selecter"
+                                android:focusable="true"
+                                android:hint="State *"
+                                android:imeOptions="actionNext"
+                                android:nextFocusForward="@+id/etCountry"
+                                android:singleLine="true"
+                                app:fontStyle="regular" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/unit_12dp"
+                        android:orientation="horizontal">
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="@dimen/unit_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="@dimen/unit_4dp"
+                            android:layout_weight="1"
+                            android:focusable="true">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                                android:id="@+id/etCountry"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_selecter"
+                                android:focusable="true"
+                                android:hint="Country *"
+                                android:imeOptions="actionNext"
+                                android:nextFocusForward="@+id/etPinCode"
+                                android:singleLine="true"
+                                app:fontStyle="regular" />
+                        </android.support.design.widget.TextInputLayout>
+
+                        <android.support.design.widget.TextInputLayout
+                            android:layout_width="@dimen/unit_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/unit_4dp"
+                            android:layout_weight="1"
+                            android:focusable="true">
+
+                            <com.coruscate.centrecourt.CustomControls.TypefacedEditText
+                                android:id="@+id/etPinCode"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/edittext_selecter"
+                                android:focusable="true"
+                                android:hint="Pincode *"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:maxLength="6"
+                                android:singleLine="true"
+                                app:fontStyle="regular" />
+                        </android.support.design.widget.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/unit_48dp"
+                    android:layout_marginTop="@dimen/unit_24dp"
+                    android:background="@drawable/button_selecter_round_corner"
+                    android:gravity="center"
+                    android:text="SUBMIT"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16dp"
+                    app:fontStyle="regular" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</RelativeLayout>

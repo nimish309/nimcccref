@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activityBackground"
+    android:orientation="vertical"
+    tools:context="com.coruscate.centrecourt.UserInterface.Activity.OrderListActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:id="@+id/relativeLayoutTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/activityBackground"
+        android:orientation="horizontal"
+        android:padding="@dimen/unit_10dp">
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+            android:id="@+id/txttotalAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageViewUser"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:text="2 Saved Address"
+            android:textSize="16dp"
+            app:fontStyle="regular" />
+
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+            android:id="@+id/txtAddAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="Add Address"
+            android:textColor="@color/indicator_1"
+            android:textSize="16dp"
+            app:fontStyle="regular" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/myAddressRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/activityBackground"
+        android:fadeScrollbars="false"
+        android:scrollbarThumbVertical="@drawable/scrollthumb"
+        android:scrollbars="vertical" />
+
+    <include layout="@layout/progressbar_nodata" />
+
+</LinearLayout>

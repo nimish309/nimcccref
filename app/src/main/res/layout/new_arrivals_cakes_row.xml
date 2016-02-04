@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewTop"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/unit_5dp"
+    android:layout_marginTop="@dimen/unit_5dp"
+    android:layout_marginRight="@dimen/unit_5dp"
+    android:background="@android:color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    card_view:cardCornerRadius="@dimen/unit_3dp"
+    card_view:cardElevation="@dimen/unit_3dp">
+
+    <ImageView
+        android:id="@+id/ImgRowImage"
+        android:layout_width="@dimen/unit_120dp"
+        android:layout_height="@dimen/unit_120dp"
+        android:layout_gravity="center"
+        android:padding="@dimen/unit_10dp"
+        android:src="@drawable/hart_cake" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@drawable/layout_buttom_card_background"
+        android:padding="@dimen/unit_5dp">
+
+        <com.coruscate.centrecourt.CustomControls.TypefacedTextView
+            android:id="@+id/txtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/unit_5dp"
+            android:layout_toLeftOf="@+id/ImgSmallIcon"
+            android:singleLine="true"
+            android:text="Hart cakes 2015"
+            android:textColor="@android:color/white"
+            android:textSize="14dp"
+            app:fontStyle="regular" />
+
+        <ImageView
+            android:id="@+id/ImgSmallIcon"
+            android:layout_width="@dimen/unit_18dp"
+            android:layout_height="@dimen/unit_18dp"
+            android:layout_marginRight="@dimen/unit_5dp"
+            android:layout_toLeftOf="@+id/imgShowPopup"
+            android:src="@drawable/hart_cake" />
+
+
+        <ImageView
+            android:id="@+id/imgShowPopup"
+            android:layout_width="@dimen/unit_18dp"
+            android:layout_height="@dimen/unit_18dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="top"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/icon_pop_up" />
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
+

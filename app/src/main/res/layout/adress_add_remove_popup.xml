@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/PopupLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/unit_20dp"
+    android:background="@color/activityBackground"
+    android:clickable="true"
+    android:layout_gravity="right"
+    android:orientation="vertical"
+    card_view:cardCornerRadius="@dimen/unit_3dp"
+    card_view:cardElevation="@dimen/unit_10dp">
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/activityBackground"
+        android:elevation="@dimen/unit_10dp"
+        android:orientation="vertical">
+
+        <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+            android:id="@+id/btnEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/activityBackground"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/unit_10dp"
+            android:paddingRight="@dimen/unit_10dp"
+            android:text="Edit"
+            android:textAllCaps="false"
+            android:textColor="@color/gray"
+            app:fontStyle="regular" />
+
+
+        <com.coruscate.centrecourt.CustomControls.TypedfacedButton
+            android:id="@+id/btnRemove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/activityBackground"
+            android:gravity="left|center_vertical"
+            android:paddingLeft="@dimen/unit_10dp"
+            android:paddingRight="@dimen/unit_32dp"
+            android:text="Remove"
+            android:textAllCaps="false"
+            android:textColor="@color/gray"
+            app:fontStyle="regular" />
+
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
